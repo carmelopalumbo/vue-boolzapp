@@ -33,7 +33,7 @@
                 <div class="my_profile d-flex">
                     <div class="my_avatar">
                         <img src="assets/img/avatar_1.jpg" alt="temp" class="avatar">
-                        <span>Carmelo Palumbo</span>
+                        <span>Carmelo</span>
                     </div>
                     <div class="profile_icons">
                         <i class="fa-solid fa-circle-notch"></i>
@@ -60,7 +60,8 @@
 
                 <div 
                 class="chat d-flex"
-                v-for="contact in contacts">
+                v-for="(contact, index) in contacts"
+                @click="getNewChat(index)">
                     <div class="info">
                         <img :src="contact.avatar" :alt="contact.name" class="avatar">
                         <p>{{contact.name}}</p>
@@ -80,8 +81,8 @@
 
             <div class="header_chat">
                 <div class="my_avatar">
-                    <img src="assets/img/avatar_2.jpg" alt="temp" class="avatar">
-                    <p>Michele</p>
+                    <img :src="contacts[activeChat].avatar" :alt="contacts[activeChat].name" class="avatar">
+                    <p>{{contacts[activeChat].name}}</p>
                     <p>Ultimo accesso oggi alle 12:00</p>
                 </div>
                 <div class="profile_icons">
@@ -93,54 +94,12 @@
 
             <div class="box-chat">
 
-                <div class="sent d-flex">
-                    <p>Ciao come va?</p>
-                    <p>12:15</p>
-                </div>
-
-                <div class="received d-flex">
-                    <p>Tutto bene grazie!</p>
-                    <p>12:18</p>
-                </div>
-
-                <div class="sent d-flex">
-                    <p>Ciao come va?</p>
-                    <p>12:15</p>
-                </div>
-
-                <div class="received d-flex">
-                    <p>Tutto bene grazie!</p>
-                    <p>12:18</p>
-                </div>
-
-                <div class="sent d-flex">
-                    <p>Ciao come va?</p>
-                    <p>12:15</p>
-                </div>
-
-                <div class="received d-flex">
-                    <p>Tutto bene grazie!</p>
-                    <p>12:18</p>
-                </div>
-
-                <div class="sent d-flex">
-                    <p>Ciao come va?</p>
-                    <p>12:15</p>
-                </div>
-
-                <div class="received d-flex">
-                    <p>Tutto bene grazie!</p>
-                    <p>12:18</p>
-                </div>
-
-                <div class="sent d-flex">
-                    <p>Ciao come va?</p>
-                    <p>12:15</p>
-                </div>
-
-                <div class="sent d-flex">
-                    <p>Ciao come va?</p>
-                    <p>12:15</p>
+                <div 
+                class="d-flex"
+                v-for="chat in contacts[activeChat].messages"
+                :class="chat.status">
+                    <p>{{chat.message}}</p>
+                    <p>{{chat.date}}</p>
                 </div>
 
             </div>

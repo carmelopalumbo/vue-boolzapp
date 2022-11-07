@@ -170,12 +170,18 @@ createApp({
                     }
                 ],
                 }
-                ]
+            ],
+
+            activeChat: 0
+        
         }
     },
 
     // metodi
     methods:{
-
+        getNewChat(index){
+            this.activeChat = index;
+        }
     }
+    
 }).mount('#app');
