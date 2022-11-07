@@ -29,6 +29,7 @@ body{
     width: 70vw;
     height: 70vh;
     display: flex;
+    min-height: 625px;
 }
 
  /* chat list */
@@ -171,6 +172,7 @@ body{
 .chat_container{
     width: 70%;
     border: 1px solid black;
+    min-width: 704px;
 }
 
 .chat_container .header_chat{
@@ -190,6 +192,7 @@ body{
 .chat_container .header_chat{
     display: flex;
     justify-content: space-between;
+    height: 64px;
 }
 
 .chat_container .header_chat .profile_icons{
@@ -201,4 +204,37 @@ body{
     background-image: url("/assets/img/mine.jpg");
     width: 100%;
     height: calc(100% - 64px);
+    padding: 50px 100px;
+    overflow: auto;
+}
+
+.chat_container .box-chat .sent,
+.chat_container .box-chat .received{
+    margin-bottom: 30px;
+    width: 35%;
+    padding: 7px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.chat_container .box-chat .sent{
+    background-color: #D5F9BA;
+    margin-left: auto;
+}
+
+.chat_container .box-chat .received{
+    background-color: white;
+    margin-right: auto;
+}
+
+.chat_container .box-chat .sent :first-child,
+.chat_container .box-chat .received :first-child{
+    padding: 5px;
+}
+
+.chat_container .box-chat .sent :last-child,
+.chat_container .box-chat .received :last-child{
+    font-size: 0.6rem;
+    color: gray;
+    margin-top: 22px;
 }
