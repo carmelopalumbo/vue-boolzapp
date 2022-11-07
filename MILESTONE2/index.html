@@ -24,7 +24,7 @@
 
 <body>
     
-    <div class="main-container">
+    <div class="main-container" id="app">
 
         <!-- lista chat -->
         <div class="chat-list-container">
@@ -58,87 +58,12 @@
 
             <div class="chat-list">
 
-                <div class="chat d-flex active">
+                <div 
+                class="chat d-flex"
+                v-for="contact in contacts">
                     <div class="info">
-                        <img src="assets/img/avatar_2.jpg" alt="temp" class="avatar">
-                        <p>Michele</p>
-                        <p>Ultimo messaggio inviato</p>
-                    </div>
-                    <div class="hour">
-                        <p>12:26</p>
-                    </div>
-                </div>
-
-                <div class="chat d-flex">
-                    <div class="info">
-                        <img src="assets/img/avatar_2.jpg" alt="temp" class="avatar">
-                        <p>Michele</p>
-                        <p>Ultimo messaggio inviato</p>
-                    </div>
-                    <div class="hour">
-                        <p>12:26</p>
-                    </div>
-                </div>
-
-                <div class="chat d-flex">
-                    <div class="info">
-                        <img src="assets/img/avatar_2.jpg" alt="temp" class="avatar">
-                        <p>Michele</p>
-                        <p>Ultimo messaggio inviato</p>
-                    </div>
-                    <div class="hour">
-                        <p>12:26</p>
-                    </div>
-                </div>
-
-                <div class="chat d-flex">
-                    <div class="info">
-                        <img src="assets/img/avatar_2.jpg" alt="temp" class="avatar">
-                        <p>Michele</p>
-                        <p>Ultimo messaggio inviato</p>
-                    </div>
-                    <div class="hour">
-                        <p>12:26</p>
-                    </div>
-                </div>
-
-                <div class="chat d-flex">
-                    <div class="info">
-                        <img src="assets/img/avatar_2.jpg" alt="temp" class="avatar">
-                        <p>Michele</p>
-                        <p>Ultimo messaggio inviato</p>
-                    </div>
-                    <div class="hour">
-                        <p>12:26</p>
-                    </div>
-                </div>
-
-                <div class="chat d-flex">
-                    <div class="info">
-                        <img src="assets/img/avatar_2.jpg" alt="temp" class="avatar">
-                        <p>Michele</p>
-                        <p>Ultimo messaggio inviato</p>
-                    </div>
-                    <div class="hour">
-                        <p>12:26</p>
-                    </div>
-                </div>
-
-                <div class="chat d-flex">
-                    <div class="info">
-                        <img src="assets/img/avatar_2.jpg" alt="temp" class="avatar">
-                        <p>Michele</p>
-                        <p>Ultimo messaggio inviato</p>
-                    </div>
-                    <div class="hour">
-                        <p>12:26</p>
-                    </div>
-                </div>
-
-                <div class="chat d-flex">
-                    <div class="info">
-                        <img src="assets/img/avatar_2.jpg" alt="temp" class="avatar">
-                        <p>Michele</p>
+                        <img :src="contact.avatar" :alt="contact.name" class="avatar">
+                        <p>{{contact.name}}</p>
                         <p>Ultimo messaggio inviato</p>
                     </div>
                     <div class="hour">

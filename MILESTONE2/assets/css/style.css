@@ -153,6 +153,7 @@ body{
 .chat_container .header_chat .my_avatar p:first-of-type{
     font-weight: bold;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 .chat-list .chat .info p:last-of-type,

@@ -32,7 +32,7 @@ createApp({
                 ],
                 },
                 {
-                name: 'Simona',
+                name: 'Simone',
                 avatar: 'assets/img/avatar_2.jpg',
                 visible: true,
                 messages: [
@@ -93,7 +93,7 @@ createApp({
                 ],
                 },
                 {
-                name: 'Rita',
+                name: 'Domenico',
                 avatar: 'assets/img/avatar_5.jpg',
                 visible: true,
                 messages: [
@@ -110,7 +110,7 @@ createApp({
                 ],
                 },
                 {
-                name: 'Enrico',
+                name: 'Rita',
                 avatar: 'assets/img/avatar_6.jpg',
                 visible: true,
                 messages: [
@@ -176,6 +176,6 @@ createApp({
 
     // metodi
     methods:{
-        
+
     }
-})
+}).mount('#app');
