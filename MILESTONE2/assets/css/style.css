@@ -204,7 +204,7 @@ body{
 }
 
 .chat_container .box-chat{
-    background-image: url("/assets/img/mine.jpg");
+    background-image: url("/MILESTONE2/assets/img/mine.jpg");
     width: 100%;
     height: calc(100% - 119px);
     padding: 50px 100px;
