@@ -22,6 +22,8 @@ body{
     display: flex;
 }
 
+/* main container */
+
 .main-container{
     margin: 80px auto;
     width: 70vw;
@@ -29,22 +31,13 @@ body{
     display: flex;
 }
 
+ /* chat list */
+
 .chat-list-container{
     width: 30%;
     min-width: 300px;
     border: 1px solid black;
     background-color: white;
-}
-
-.my_profile,
-.get_notifications{
-    padding: 15px;
-}
-
-.chat-box{
-    width: 70%;
-    background-color: blueviolet;
-    border: 1px solid black;
 }
 
 .avatar{
@@ -55,17 +48,21 @@ body{
     cursor: pointer;
 }
 
-.my_profile{
+.header_list .my_profile{
     justify-content: space-between;
+    padding: 6px;
+    background-color: #EAEAEA;
 }
 
 .my_avatar span{
     padding-left: 5px;
 }
 
-.profile_icons i{
-    padding: 6px;
-    color: lightgray;
+.header_list .profile_icons i,
+.header_chat .profile_icons i{
+    margin-top: 5px;
+    padding: 10px;
+    color: gray;
     font-size: 1.2rem;
     line-height: 100%;
     cursor: pointer;
@@ -75,6 +72,7 @@ body{
 .get_notifications{
     background-color: #8EDAFC;
     display: flex;
+    padding: 15px;
 }
 
 .get_notifications i{
@@ -134,7 +132,7 @@ body{
 
 .chat-list .chat{
     padding: 15px 12px;
-    border-bottom: 1px solid lightgray
+    border-bottom: 1px solid lightgray;
 }
 
 .chat-list .chat .info{
@@ -146,13 +144,15 @@ body{
     margin-right: 15px;
 }
 
-.chat-list .chat .info p:first-of-type{
+.chat-list .chat .info p:first-of-type,
+.chat_container .header_chat .my_avatar p:first-of-type{
     font-weight: bold;
     padding-bottom: 5px;
 }
 
 .chat-list .chat .info p:last-of-type,
-.chat-list .chat .hour p{
+.chat-list .chat .hour p,
+.chat_container .header_chat .my_avatar p:last-of-type{
     color: gray;
     font-size: 0.8rem;
 }
@@ -164,4 +164,41 @@ body{
 
 .active{
     background-color: #E9EBEB;
+}
+
+/* box chat */
+
+.chat_container{
+    width: 70%;
+    border: 1px solid black;
+}
+
+.chat_container .header_chat{
+    background-color: #EAEAEA;
+    padding: 6px;
+}
+
+.chat_container .header_chat .my_avatar{
+    flex-basis: 70%;
+}
+
+.chat_container .header_chat img{
+    float: left;
+    margin-right: 10px;
+}
+
+.chat_container .header_chat{
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat_container .header_chat .profile_icons{
+    flex-basis: 30%;
+    text-align: right;
+}
+
+.chat_container .box-chat{
+    background-image: url("/assets/img/mine.jpg");
+    width: 100%;
+    height: calc(100% - 64px);
 }
