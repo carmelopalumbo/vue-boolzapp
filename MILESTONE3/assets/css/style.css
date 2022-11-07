@@ -1,0 +1,267 @@
+/* css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(180deg, #009688 17%, #dadbd3 10%, #d2dbdb 30%);
+}
+
+/* utility */
+
+.debug{
+    background-color: brown;
+    border: 1px solid black;
+}
+
+.d-flex{
+    display: flex;
+}
+
+/* main container */
+
+.main-container{
+    margin: 60px auto;
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    min-height: 625px;
+}
+
+ /* chat list */
+
+.chat-list-container{
+    width: 30%;
+    min-width: 310px;
+    background-color: white;
+}
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.header_list .my_profile{
+    justify-content: space-between;
+    padding: 6px;
+    background-color: #EAEAEA;
+    border-right: 1px solid lightgray;
+}
+
+.my_avatar span{
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+.header_list .profile_icons i,
+.header_chat .profile_icons i{
+    margin-top: 5px;
+    padding: 10px;
+    color: gray;
+    font-size: 1.2rem;
+    line-height: 100%;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.get_notifications{
+    background-color: #8EDAFC;
+    display: flex;
+    padding: 15px;
+}
+
+.get_notifications i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #8EDAFC;
+    background-color: white;
+    padding: 10px;
+}
+
+.get_notifications .text{
+    padding-left: 10px;
+}
+
+.get_notifications .text :first-child{
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding-bottom: 3px;
+}
+
+.get_notifications .text :last-child{
+    font-size: 0.7rem;
+    color: grey;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.find_avatar{
+    border: 1px solid #EAEAEA;
+    padding: 10px;
+    margin: 5px;
+}
+
+.find_avatar button{
+    color: gray;
+    border: none;
+    background-color: white;
+    padding: 0 15px;
+}
+
+.find_avatar input{
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.find_avatar input:focus,
+.chat_container .bar_chat input:focus{
+    outline: none !important;
+}
+
+.chat-list{
+    overflow: auto;
+    height: 430px;
+}
+
+.chat-list .chat{
+    padding: 15px 12px;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+}
+
+.chat-list .chat .info{
+   flex-basis: 80%;
+}
+
+.chat-list .chat .info img{
+    float: left;
+    margin-right: 15px;
+}
+
+.chat-list .chat .info p:first-of-type,
+.chat_container .header_chat .my_avatar p:first-of-type{
+    font-weight: bold;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.chat-list .chat .info p:last-of-type,
+.chat-list .chat .hour p,
+.chat_container .header_chat .my_avatar p:last-of-type{
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.chat-list .chat .hour{
+    flex-basis: 20%;
+    text-align: right;
+}
+
+.active{
+    background-color: #E9EBEB;
+}
+
+/* box chat */
+
+.chat_container{
+    width: 70%;
+    min-width: 704px;
+}
+
+.chat_container .header_chat{
+    background-color: #EAEAEA;
+    padding: 6px;
+}
+
+.chat_container .header_chat .my_avatar{
+    flex-basis: 70%;
+}
+
+.chat_container .header_chat img{
+    float: left;
+    margin-right: 10px;
+}
+
+.chat_container .header_chat{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.chat_container .header_chat .profile_icons{
+    flex-basis: 30%;
+    text-align: right;
+}
+
+.chat_container .box-chat{
+    background-image: url("/MILESTONE2/assets/img/mine.jpg");
+    width: 100%;
+    height: calc(100% - 119px);
+    padding: 50px 100px;
+    overflow: auto;
+}
+
+.chat_container .box-chat .sent,
+.chat_container .box-chat .received{
+    margin-bottom: 30px;
+    width: 50%;
+    padding: 7px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.chat_container .box-chat .sent{
+    background-color: #D5F9BA;
+    margin-left: auto;
+}
+
+.chat_container .box-chat .received{
+    background-color: white;
+    margin-right: auto;
+}
+
+.chat_container .box-chat .sent :first-child,
+.chat_container .box-chat .received :first-child{
+    padding: 5px;
+}
+
+.chat_container .box-chat .sent :last-child,
+.chat_container .box-chat .received :last-child{
+    font-size: 0.6rem;
+    color: gray;
+    margin-top: 22px;
+}
+
+.chat_container .bar_chat{
+    height: 55px;
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.chat_container .bar_chat input{
+    width: 85%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+.chat_container .bar_chat i{
+    font-size: 1.5rem;
+    color: rgb(27, 27, 27);
+    cursor: pointer;
+}
