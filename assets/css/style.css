@@ -29,7 +29,7 @@ body{
     display: flex;
 }
 
-.chat-list{
+.chat-list-container{
     width: 30%;
     min-width: 300px;
     border: 1px solid black;
@@ -52,6 +52,7 @@ body{
     height: 50px;
     border-radius: 50%;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .my_profile{
@@ -124,4 +125,43 @@ body{
 
 .find_avatar input:focus{
     outline: none !important;
+}
+
+.chat-list{
+    overflow: auto;
+    height: 430px;
+}
+
+.chat-list .chat{
+    padding: 15px 12px;
+    border-bottom: 1px solid lightgray
+}
+
+.chat-list .chat .info{
+   flex-basis: 80%;
+}
+
+.chat-list .chat .info img{
+    float: left;
+    margin-right: 15px;
+}
+
+.chat-list .chat .info p:first-of-type{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.chat-list .chat .info p:last-of-type,
+.chat-list .chat .hour p{
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.chat-list .chat .hour{
+    flex-basis: 20%;
+    text-align: right;
+}
+
+.active{
+    background-color: #E9EBEB;
 }
