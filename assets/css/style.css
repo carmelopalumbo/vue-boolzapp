@@ -8,7 +8,8 @@
 
 body{
     font-family: 'Lato', sans-serif;
-    background-color: lightgray;
+    height: 100vh;
+    background: linear-gradient(180deg, #009688 17%, #dadbd3 10%, #d2dbdb 30%);
 }
 
 /* utility */
@@ -25,7 +26,7 @@ body{
 /* main container */
 
 .main-container{
-    margin: 80px auto;
+    margin: 60px auto;
     width: 70vw;
     height: 70vh;
     display: flex;
