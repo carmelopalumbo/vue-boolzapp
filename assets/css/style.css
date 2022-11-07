@@ -37,7 +37,7 @@ body{
 
 .chat-list-container{
     width: 30%;
-    min-width: 300px;
+    min-width: 310px;
     background-color: white;
 }
 
@@ -58,6 +58,7 @@ body{
 
 .my_avatar span{
     padding-left: 5px;
+    font-weight: bold;
 }
 
 .header_list .profile_icons i,
@@ -104,7 +105,7 @@ body{
 }
 
 .find_avatar{
-    border: 1px solid gray;
+    border: 1px solid #EAEAEA;
     padding: 10px;
     margin: 5px;
 }
@@ -135,7 +136,7 @@ body{
 
 .chat-list .chat{
     padding: 15px 12px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid lightgrey;
 }
 
 .chat-list .chat .info{
