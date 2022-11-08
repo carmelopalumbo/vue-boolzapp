@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous'/>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- SCRIPT LUXON -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.0/luxon.js' integrity='sha512-mas9jHaog0obTpZqUHzxPlmPTwwP5clx2UJbdx+DxsCTy8l00hQjzMiJh9lSsqz8dcWSo3MKFZ3icgacn/0Naw==' crossorigin='anonymous'></script>
+
+    <!-- SCRIPT VUE -->
+    <script src="https://unpkg.com/vue@3"></script>
+
+
+    <title>Boolzapp</title>
+</head>
+
+<body>
+    
+    <div class="main-container" id="app">
+
+        <!-- lista chat -->
+        <div class="chat-list-container">
+
+            <div class="header_list">
+                <div class="my_profile d-flex">
+                    <div class="my_avatar">
+                        <img src="assets/img/avatar_1.jpg" alt="temp" class="avatar">
+                        <span>Carmelo Palumbo</span>
+                    </div>
+                    <div class="profile_icons">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <div class="get_notifications">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <div class="text">
+                        <p>Ricevi notifiche di nuovi messaggi.</p>
+                        <p>Attiva notifiche ora</p>
+                    </div>
+                </div>
+
+                <div class="find_avatar d-flex">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input
+                    type="text" 
+                    placeholder="Cerca e inizia una nuova chat" 
+                    name="search"
+                    v-model="search"
+                    @keyup="findChat()">
+                </div>
+            </div>
+
+            <div class="chat-list">
+
+                <div 
+                class="chat d-flex"
+                v-for="(contact, index) in contacts"
+                :class="{'active' : contact.active}"
+                v-show="contact.visible"
+                @click="getNewChat(index)">
+                    <div class="info">
+                        <img :src="contact.avatar" :alt="contact.name" class="avatar">
+                        <p>{{contact.name}}</p>
+                        <p>{{ contact.messages[contact.messages.length - 1].message }}</p>
+                    </div>
+                    <div class="hour">
+                        <p>{{ contact.messages[contact.messages.length - 1].date }}</p>
+                    </div>
+                </div>
+    
+            </div>
+
+        </div>
+
+        <!-- box chat -->
+        <div class="chat_container">
+
+            <div class="header_chat">
+                <div class="my_avatar">
+                    <img :src="contacts[activeChat].avatar" :alt="contacts[activeChat].name" class="avatar">
+                    <p>{{contacts[activeChat].name}}</p>
+                    <p>Ultimo accesso oggi alle 12:00</p>
+                </div>
+                <div class="profile_icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+
+            <div class="box-chat">
+
+                <div 
+                class="d-flex"
+                v-for="chat in contacts[activeChat].messages"
+                :class="chat.status">
+                    <p>{{chat.message}}</p>
+                    <p>{{chat.date}}</p>
+                </div>
+
+            </div>
+
+            <div class="bar_chat">
+                <i class="fa-regular fa-face-smile"></i>
+                <input
+                type="text" 
+                placeholder="Scrivi un messaggio" 
+                v-model="newMessage"
+                @keyup.enter="addNewMessage()">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
