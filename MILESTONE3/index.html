@@ -61,6 +61,7 @@
                 <div 
                 class="chat d-flex"
                 v-for="(contact, index) in contacts"
+                :class="{'active' : contact.visible}"
                 @click="getNewChat(index)">
                     <div class="info">
                         <img :src="contact.avatar" :alt="contact.name" class="avatar">
