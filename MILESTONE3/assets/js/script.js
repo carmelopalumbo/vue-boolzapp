@@ -13,6 +13,7 @@ createApp({
                 name: 'Alessandro',
                 avatar: 'assets/img/avatar_1.jpg',
                 visible: true,
+                active: true,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -34,7 +35,8 @@ createApp({
                 {
                 name: 'Simone',
                 avatar: 'assets/img/avatar_2.jpg',
-                visible: false,
+                visible: true,
+                active: false,
                 messages: [
                     {
                     date: '20/03/2020 16:30:00',
@@ -56,7 +58,8 @@ createApp({
                 {
                 name: 'Samuele',
                 avatar: 'assets/img/avatar_3.jpg',
-                visible: false,
+                visible: true,
+                active: false,
                 messages: [
                     {
                     date: '28/03/2020 10:10:40',
@@ -78,7 +81,8 @@ createApp({
                 {
                 name: 'Nicola',
                 avatar: 'assets/img/avatar_4.jpg',
-                visible: false,
+                visible: true,
+                active: false,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -95,7 +99,8 @@ createApp({
                 {
                 name: 'Domenico',
                 avatar: 'assets/img/avatar_5.jpg',
-                visible: false,
+                visible: true,
+                active: false,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -112,7 +117,8 @@ createApp({
                 {
                 name: 'Rita',
                 avatar: 'assets/img/avatar_6.jpg',
-                visible: false,
+                visible: true,
+                active: false,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -134,7 +140,8 @@ createApp({
                 {
                 name: 'Federico',
                 avatar: 'assets/img/avatar_7.jpg',
-                visible: false,
+                visible: true,
+                active: false,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -151,7 +158,8 @@ createApp({
                 {
                 name: 'Pietro',
                 avatar: 'assets/img/avatar_8.jpg',
-                visible: false,
+                visible: true,
+                active: false,
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -180,9 +188,9 @@ createApp({
     // metodi
     methods:{
         getNewChat(index){
-            this.contacts[this.activeChat].visible = false;
+            this.contacts[this.activeChat].active = false;
             this.activeChat = index;
-            this.contacts[this.activeChat].visible = true;
+            this.contacts[this.activeChat].active = true;
         },
 
         addNewMessage(){
