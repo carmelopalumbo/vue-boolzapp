@@ -6,6 +6,7 @@ createApp({
 
     data(){
         return{
+
             // array di oggetti
             contacts:[
                 {
@@ -200,6 +201,7 @@ createApp({
                 }
             ],
 
+            // array risposte random
             replies: ['Ok!', 'Va bene', 'Grazie', 'Fantastico', 'Arrivo!', 'Scusa!'],
 
             activeChat: 0,
@@ -210,12 +212,15 @@ createApp({
 
     // metodi
     methods:{
+
+        // cambia la chat attiva al click di essa
         getNewChat(index){
             this.contacts[this.activeChat].active = false;
             this.activeChat = index;
             this.contacts[this.activeChat].active = true;
         },
 
+        // aggiunge un nuovo messaggio alla chat attiva al enter del input
         addNewMessage(){
             if(!this.newMessage) return;
             const tempMessage = {
@@ -229,6 +234,7 @@ createApp({
             setTimeout(this.getReplyMessage, 2000);
         },
 
+        // genera risposta random dopo due secondi dal invio del nuovo messaggio
         getReplyMessage(){
             const tempMessage = {
                 date: '10/01/2020 15:57:00',
@@ -239,6 +245,7 @@ createApp({
             this.contacts[this.activeChat].messages.push(tempMessage);
         },
 
+        // filtra le chat tramite l input in barra
         findChat(){
             this.contacts.forEach(contact => {
                 if(!contact.name.includes(this.search)){
@@ -249,10 +256,12 @@ createApp({
             });
         },
 
+        // cancella il messaggio al click dell opzione
         deleteMessage(i){
             this.contacts[this.activeChat].messages.splice(i, 1);
         },
 
+        // verifica se non sono presenti messaggi e ritorna una stringa vuota da visualizzare nel anteprima
         lastMessage(contact){
             if(contact.messages.length !== 0){
                 return contact.messages[contact.messages.length - 1].message;
@@ -261,6 +270,7 @@ createApp({
             }
         },
 
+        // verifica se non sono presenti date e ritorna una stringa vuota da visualizzare nel anteprima
         lastDate(contact){
             if(contact.messages.length !== 0){
                 return contact.messages[contact.messages.length - 1].date;
@@ -269,6 +279,7 @@ createApp({
             }
         },
 
+        // genera un numero random e restituisce una stringa in quell indice
         getRandomReply(){
             const num = Math.floor(Math.random() * (this.replies.length));
             return this.replies[num];
