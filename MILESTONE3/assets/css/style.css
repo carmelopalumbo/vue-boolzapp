@@ -131,7 +131,7 @@ body{
 }
 
 .chat-list{
-    overflow: auto;
+    overflow-y: scroll;
     height: 430px;
 }
 
@@ -167,6 +167,7 @@ body{
 .chat-list .chat .hour{
     flex-basis: 20%;
     text-align: right;
+    margin-right: 5px;
 }
 
 .active{
@@ -210,7 +211,7 @@ body{
     width: 100%;
     height: calc(100% - 119px);
     padding: 50px 100px;
-    overflow: auto;
+    overflow-y: scroll;
 }
 
 .chat_container .box-chat .sent,
