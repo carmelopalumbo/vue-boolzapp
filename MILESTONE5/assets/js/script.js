@@ -140,7 +140,7 @@ createApp({
                 lastSeen: '15:48',
                 messages: [
                     {
-                    date: '15:30',
+                    date: '10/01/2020 15:10:00',
                     message: 'Ciao Claudia, hai novità?',
                     status: 'sent',
                     toggle: false
@@ -167,7 +167,7 @@ createApp({
                 lastSeen: '10:15',
                 messages: [
                     {
-                    date: '15:30',
+                    date: '10/01/2020 15:30:00',
                     message: 'Fai gli auguri a Martina che è il suo compleanno!',
                     status: 'sent',
                     toggle: false
@@ -291,6 +291,11 @@ createApp({
         getRandomReply(){
             const num = Math.floor(Math.random() * (this.replies.length));
             return this.replies[num];
+        },
+
+        getChatDate(i){
+            const tempDate = Array.from(this.contacts[this.activeChat].messages[i].date);
+            return tempDate.splice(11,6).toString();
         }
     },
 

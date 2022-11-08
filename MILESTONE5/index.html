@@ -111,7 +111,9 @@
                 :class="chat.status"
                 @click="chat.toggle = !chat.toggle">
                     <p class="message">{{chat.message}}</p>
-                    <p class="date">{{chat.date}}</p>
+                    <p 
+                    class="date"
+                    :set="chatDate = getChatDate(index)">{{chatDate}}</p>
                     <div 
                     class="toggle_info"
                     v-show="chat.toggle">
