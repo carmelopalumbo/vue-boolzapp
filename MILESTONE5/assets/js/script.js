@@ -293,6 +293,7 @@ createApp({
             return this.replies[num];
         },
 
+        //formatta la data per la visualizzazione in chat
         getChatDate(i){
             const tempDate = Array.from(this.contacts[this.activeChat].messages[i].date);
             return tempDate.splice(11,5).join("");
