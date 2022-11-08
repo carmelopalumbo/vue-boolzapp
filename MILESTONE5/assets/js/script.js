@@ -200,6 +200,8 @@ createApp({
                 }
             ],
 
+            replies: ['Ok!', 'Va bene', 'Grazie', 'Fantastico', 'Arrivo!', 'Scusa!'],
+
             activeChat: 0,
             newMessage: '',
             search: ''
@@ -230,7 +232,7 @@ createApp({
         getReplyMessage(){
             const tempMessage = {
                 date: '10/01/2020 15:57:00',
-                message: 'Ok!',
+                message: this.getRandomReply(),
                 status: 'received',
                 toggle: false
             }
@@ -266,7 +268,13 @@ createApp({
                 return "";
             }
         },
+
+        getRandomReply(){
+            const num = Math.floor(Math.random() * (this.replies.length));
+            return this.replies[num];
+        }
     },
+
     mounted(){
         
     }
