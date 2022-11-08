@@ -295,7 +295,7 @@ createApp({
 
         getChatDate(i){
             const tempDate = Array.from(this.contacts[this.activeChat].messages[i].date);
-            return tempDate.splice(11,6).toString();
+            return tempDate.splice(11,5).join("");
         }
     },
 

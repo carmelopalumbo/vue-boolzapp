@@ -79,7 +79,7 @@
                         <p :set="text = lastMessage(contact)">{{ text }}</p>
                     </div>
                     <div class="hour">
-                        <p :set="hour = lastDate(contact)">{{ hour }}</p>
+                        <p :set="hour = lastDate(contact)">{{ Array.from(hour).splice(11,5).join("") }}</p>
                     </div>
                 </div>
     
