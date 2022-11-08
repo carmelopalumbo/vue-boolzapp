@@ -94,7 +94,7 @@
                 <div class="my_avatar">
                     <img :src="contacts[activeChat].avatar" :alt="contacts[activeChat].name" class="avatar">
                     <p>{{contacts[activeChat].name}}</p>
-                    <p>Ultimo accesso oggi alle 12:00</p>
+                    <p>Ultimo accesso oggi alle {{contacts[activeChat].lastSeen}}</p>
                 </div>
                 <div class="profile_icons">
                     <i class="fa-solid fa-magnifying-glass"></i>

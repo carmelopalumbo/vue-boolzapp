@@ -14,6 +14,7 @@ createApp({
                 avatar: 'assets/img/avatar_1.jpg',
                 visible: true,
                 active: true,
+                lastSeen: '15:45',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -40,6 +41,7 @@ createApp({
                 avatar: 'assets/img/avatar_2.jpg',
                 visible: true,
                 active: false,
+                lastSeen: '15:55',
                 messages: [
                     {
                     date: '20/03/2020 16:30:00',
@@ -66,6 +68,7 @@ createApp({
                 avatar: 'assets/img/avatar_3.jpg',
                 visible: true,
                 active: false,
+                lastSeen: '14:45',
                 messages: [
                     {
                     date: '28/03/2020 10:10:40',
@@ -92,6 +95,7 @@ createApp({
                 avatar: 'assets/img/avatar_4.jpg',
                 visible: true,
                 active: false,
+                lastSeen: '12:13',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -112,6 +116,7 @@ createApp({
                 avatar: 'assets/img/avatar_5.jpg',
                 visible: true,
                 active: false,
+                lastSeen: '17:20',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
@@ -132,6 +137,7 @@ createApp({
                 avatar: 'assets/img/avatar_6.jpg',
                 visible: true,
                 active: false,
+                lastSeen: '15:48',
                 messages: [
                     {
                     date: '15:30',
@@ -158,6 +164,7 @@ createApp({
                 avatar: 'assets/img/avatar_7.jpg',
                 visible: true,
                 active: false,
+                lastSeen: '10:15',
                 messages: [
                     {
                     date: '15:30',
@@ -178,6 +185,7 @@ createApp({
                 avatar: 'assets/img/avatar_8.jpg',
                 visible: true,
                 active: false,
+                lastSeen: '13:15',
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
