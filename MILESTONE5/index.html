@@ -106,11 +106,17 @@
             <div class="box-chat">
 
                 <div 
-                class="d-flex"
+                class="d-flex box"
                 v-for="chat in contacts[activeChat].messages"
                 :class="chat.status">
-                    <p>{{chat.message}}</p>
-                    <p>{{chat.date}}</p>
+                    <p class="message">{{chat.message}}</p>
+                    <p class="date">{{chat.date}}</p>
+
+                    <div class="toggle_info">
+                        <p>Info messaggio</p>
+                        <p>Cancella messaggio</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down chevron"></i>
                 </div>
 
             </div>

@@ -223,6 +223,28 @@ body{
     justify-content: space-between;
 }
 
+.chat_container .box-chat .box{
+    position: relative;
+}
+
+.chat_container .box-chat .toggle_info{
+    position: absolute;
+    border-radius: 5px;
+    z-index: 2;
+    top: 40%;
+    right: 10%;
+    width: 150px;
+    height: 75px;
+    display: none ;/* RIMUOVI!! */
+    background-color: rgb(240, 239, 239);
+}
+
+.chat_container .box-chat .toggle_info p{
+    padding: 10px;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
 .chat_container .box-chat .sent{
     background-color: #D5F9BA;
     margin-left: auto;
@@ -233,13 +255,20 @@ body{
     margin-right: auto;
 }
 
-.chat_container .box-chat .sent :first-child,
-.chat_container .box-chat .received :first-child{
+.chat_container .box-chat .chevron{
+    position: absolute;
+    top: 4%;
+    right: 8%;
+    color: #6B7377;
+}
+
+.chat_container .box-chat .sent .message,
+.chat_container .box-chat .received .message{
     padding: 5px;
 }
 
-.chat_container .box-chat .sent :last-child,
-.chat_container .box-chat .received :last-child{
+.chat_container .box-chat .sent .date,
+.chat_container .box-chat .received .date{
     font-size: 0.6rem;
     color: gray;
     margin-top: 22px;
