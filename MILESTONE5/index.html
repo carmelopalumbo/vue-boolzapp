@@ -76,10 +76,10 @@
                     <div class="info">
                         <img :src="contact.avatar" :alt="contact.name" class="avatar">
                         <p>{{contact.name}}</p>
-                        <p>{{ contact.messages[contact.messages.length - 1].message }}</p>
+                        <p :set="text = lastMessage(contact)">{{ text }}</p>
                     </div>
                     <div class="hour">
-                        <p>{{ contact.messages[contact.messages.length - 1].date }}</p>
+                        <p :set="hour = lastDate(contact)">{{ hour }}</p>
                     </div>
                 </div>
     
@@ -107,17 +107,17 @@
 
                 <div 
                 class="d-flex box"
-                v-for="chat in contacts[activeChat].messages"
+                v-for="(chat, index) in contacts[activeChat].messages"
                 :class="chat.status"
                 @click="chat.toggle = !chat.toggle">
                     <p class="message">{{chat.message}}</p>
                     <p class="date">{{chat.date}}</p>
-
                     <div 
                     class="toggle_info"
                     v-show="chat.toggle">
                         <p>Info messaggio</p>
-                        <p>Cancella messaggio</p>
+                        <p
+                        @click="deleteMessage(index)">Cancella messaggio</p>
                     </div>
                     <i 
                     class="fa-solid fa-chevron-down chevron"
