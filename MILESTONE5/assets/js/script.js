@@ -322,11 +322,14 @@ createApp({
 
         // apre il toggle per eliminare un messagio e previene l apertura di altri toggle se presente uno aperto
         getToggle(i){
+            this.closeAllToggle();
+            this.contacts[this.activeChat].messages[i].toggle = true;
+        },
+
+        closeAllToggle(){
             this.contacts[this.activeChat].messages.forEach(contact => {
                 contact.toggle = false;
             });
-
-            this.contacts[this.activeChat].messages[i].toggle = true;
         }
     },
 
