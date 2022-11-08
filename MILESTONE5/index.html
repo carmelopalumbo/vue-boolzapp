@@ -109,7 +109,7 @@
                 class="d-flex box"
                 v-for="(chat, index) in contacts[activeChat].messages"
                 :class="chat.status"
-                @click="chat.toggle = !chat.toggle">
+                @click.self="getToggle(index)">
                     <p class="message">{{chat.message}}</p>
                     <p 
                     class="date"

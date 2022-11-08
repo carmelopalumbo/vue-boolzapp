@@ -297,6 +297,14 @@ createApp({
         getChatDate(i){
             const tempDate = Array.from(this.contacts[this.activeChat].messages[i].date);
             return tempDate.splice(11,5).join("");
+        },
+
+        getToggle(i){
+            this.contacts[this.activeChat].messages.forEach(contact => {
+                contact.toggle = false;
+            });
+
+            this.contacts[this.activeChat].messages[i].toggle = true;
         }
     },
 
