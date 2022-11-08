@@ -52,7 +52,7 @@ body{
 
 .header_list .my_profile{
     justify-content: space-between;
-    padding: 6px;
+    padding: 6px 12px;
     background-color: #EAEAEA;
     border-right: 1px solid lightgray;
 }
