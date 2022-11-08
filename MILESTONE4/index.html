@@ -52,7 +52,12 @@
 
                 <div class="find_avatar d-flex">
                     <button type="submit"><i class="fa fa-search"></i></button>
-                    <input type="text" placeholder="Cerca e inizia una nuova chat" name="search">
+                    <input
+                    type="text" 
+                    placeholder="Cerca e inizia una nuova chat" 
+                    name="search"
+                    v-model="search"
+                    @keyup="findChat()">
                 </div>
             </div>
 
@@ -62,6 +67,7 @@
                 class="chat d-flex"
                 v-for="(contact, index) in contacts"
                 :class="{'active' : contact.active}"
+                v-show="contact.visible"
                 @click="getNewChat(index)">
                     <div class="info">
                         <img :src="contact.avatar" :alt="contact.name" class="avatar">
@@ -109,8 +115,9 @@
                 <i class="fa-regular fa-face-smile"></i>
                 <input
                 type="text" 
-                placeholder="Scrivi un messaggio" v-model="newMessage"
-                v-on:keyup.enter="addNewMessage()">
+                placeholder="Scrivi un messaggio" 
+                v-model="newMessage"
+                @keyup.enter="addNewMessage()">
                 <i class="fa-solid fa-microphone"></i>
             </div>
         </div>
