@@ -60,6 +60,7 @@ body{
 .my_avatar span{
     padding-left: 8px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .header_list .profile_icons i,
