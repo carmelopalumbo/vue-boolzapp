@@ -117,9 +117,10 @@
                     <div 
                     class="toggle_info"
                     v-show="chat.toggle">
-                        <p>Info messaggio</p>
+                        <p @click="chat.info = !chat.info">Info messaggio</p>
                         <p
                         @click="deleteMessage(index)">Cancella messaggio</p>
+                        <p v-if="chat.info">{{chat.date}}</p>
                     </div>
                     <i 
                     class="fa-solid fa-chevron-down chevron"

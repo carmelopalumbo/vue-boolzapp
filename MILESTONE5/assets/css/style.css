@@ -236,16 +236,17 @@ body{
     right: 10%;
     width: 150px;
     height: 75px;
-    background-color: rgb(240, 239, 239);
 }
 
 .chat_container .box-chat .toggle_info p{
     padding: 10px;
     font-size: 0.8rem;
     text-align: center;
+    background-color: rgb(240, 239, 239);
 }
 
-.chat_container .box-chat .toggle_info p:hover{
+.chat_container .box-chat .toggle_info :first-child:hover,
+.chat_container .box-chat .toggle_info :nth-child(2):hover{
     background-color: rgb(214, 211, 211);
 }
 
