@@ -299,6 +299,7 @@ createApp({
             return tempDate.splice(11,5).join("");
         },
 
+        // apre il toggle per eliminare un messagio e previene l apertura di altri toggle se presente uno aperto
         getToggle(i){
             this.contacts[this.activeChat].messages.forEach(contact => {
                 contact.toggle = false;
