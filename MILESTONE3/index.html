@@ -66,7 +66,7 @@
                     <div class="info">
                         <img :src="contact.avatar" :alt="contact.name" class="avatar">
                         <p>{{contact.name}}</p>
-                        <p>Ultimo messaggio inviato</p>
+                        <p>{{ contact.messages[contact.messages.length - 1].message }}</p>
                     </div>
                     <div class="hour">
                         <p>12:26</p>
@@ -107,7 +107,10 @@
 
             <div class="bar_chat">
                 <i class="fa-regular fa-face-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
+                <input
+                type="text" 
+                placeholder="Scrivi un messaggio" v-model="newMessage"
+                v-on:keyup.enter="addNewMessage()">
                 <i class="fa-solid fa-microphone"></i>
             </div>
         </div>

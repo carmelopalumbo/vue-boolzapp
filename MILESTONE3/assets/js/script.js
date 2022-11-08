@@ -173,7 +173,6 @@ createApp({
             ],
 
             activeChat: 0,
-            
             newMessage: '',
         }
     },
@@ -184,7 +183,28 @@ createApp({
             this.contacts[this.activeChat].visible = false;
             this.activeChat = index;
             this.contacts[this.activeChat].visible = true;
-        }
+        },
+
+        addNewMessage(){
+            if(!this.newMessage) return;
+            const tempMessage = {
+                date: '10/01/2020 15:54:00',
+                message: this.newMessage,
+                status: 'sent'
+            }
+            this.contacts[this.activeChat].messages.push(tempMessage);
+            this.newMessage = '';
+            setTimeout(this.getReplyMessage, 2000);
+        },
+
+        getReplyMessage(){
+            const tempMessage = {
+                date: '10/01/2020 15:57:00',
+                message: 'Ok!',
+                status: 'received'
+            }
+            this.contacts[this.activeChat].messages.push(tempMessage);
+        },
     },
 
     mounted(){
