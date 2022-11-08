@@ -14,22 +14,22 @@ createApp({
                 avatar: 'assets/img/avatar_1.jpg',
                 visible: true,
                 active: true,
-                lastSeen: '15:45',
+                lastSeen: '10/01/2022 23:18:55',
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '10/01/2022 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     status: 'sent',
                     toggle: false
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '10/01/2022 15:50:00',
                     message: 'Ricordati di stendere i panni',
                     status: 'sent',
                     toggle: false
                     },
                     {
-                    date: '10/01/2020 16:15:22',
+                    date: '10/01/2022 16:15:22',
                     message: 'Tutto fatto!',
                     status: 'received',
                     toggle: false
@@ -41,22 +41,22 @@ createApp({
                 avatar: 'assets/img/avatar_2.jpg',
                 visible: true,
                 active: false,
-                lastSeen: '15:55',
+                lastSeen: '10/01/2022 18:50:55',
                 messages: [
                     {
-                    date: '20/03/2020 16:30:00',
+                    date: '20/03/2022 16:30:00',
                     message: 'Ciao come stai?',
                     status: 'sent',
                     toggle: false
                     },
                     {
-                    date: '20/03/2020 16:30:55',
+                    date: '20/03/2022 16:30:55',
                     message: 'Bene grazie! Stasera ci vediamo?',
                     status: 'received',
                     toggle: false
                     },
                     {
-                    date: '20/03/2020 16:35:00',
+                    date: '20/03/2022 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                     status: 'sent',
                     toggle: false
@@ -68,22 +68,22 @@ createApp({
                 avatar: 'assets/img/avatar_3.jpg',
                 visible: true,
                 active: false,
-                lastSeen: '14:45',
+                lastSeen: '10/01/2022 23:20:55',
                 messages: [
                     {
-                    date: '28/03/2020 10:10:40',
+                    date: '28/03/2022 10:10:40',
                     message: 'La Marianna va in campagna',
                     status: 'received',
                     toggle: false
                     },
                     {
-                    date: '28/03/2020 10:20:10',
+                    date: '28/03/2022 10:20:10',
                     message: 'Sicuro di non aver sbagliato chat?',
                     status: 'sent',
                     toggle: false
                     },
                     {
-                    date: '28/03/2020 16:15:22',
+                    date: '28/03/2022 16:15:22',
                     message: 'Ah scusa!',
                     status: 'received',
                     toggle: false
@@ -95,16 +95,16 @@ createApp({
                 avatar: 'assets/img/avatar_4.jpg',
                 visible: true,
                 active: false,
-                lastSeen: '12:13',
+                lastSeen: '10/01/2022 19:10:55',
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '10/01/2022 15:30:55',
                     message: 'Lo sai che ha aperto una nuova pizzeria?',
                     status: 'sent',
                     toggle: false
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '10/01/2022 15:50:00',
                     message: 'Si, ma preferirei andare al cinema',
                     status: 'received',
                     toggle: false
@@ -116,16 +116,16 @@ createApp({
                 avatar: 'assets/img/avatar_5.jpg',
                 visible: true,
                 active: false,
-                lastSeen: '17:20',
+                lastSeen: '10/01/2022 19:30:55',
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '10/01/2022 15:30:55',
                     message: 'Ricordati di chiamare la nonna',
                     status: 'sent',
                     toggle: false
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '10/01/2022 15:50:00',
                     message: 'Va bene, stasera la sento',
                     status: 'received',
                     toggle: false
@@ -137,22 +137,22 @@ createApp({
                 avatar: 'assets/img/avatar_6.jpg',
                 visible: true,
                 active: false,
-                lastSeen: '15:48',
+                lastSeen: '10/01/2022 22:30:55',
                 messages: [
                     {
-                    date: '10/01/2020 15:10:00',
+                    date: '10/01/2022 15:10:00',
                     message: 'Ciao Claudia, hai novità?',
                     status: 'sent',
                     toggle: false
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '10/01/2022 15:50:00',
                     message: 'Non ancora',
                     status: 'received',
                     toggle: false
                     },
                     {
-                    date: '10/01/2020 15:51:00',
+                    date: '10/01/2022 15:51:00',
                     message: 'Nessuna nuova, buona nuova',
                     status: 'sent',
                     toggle: false
@@ -164,16 +164,16 @@ createApp({
                 avatar: 'assets/img/avatar_7.jpg',
                 visible: true,
                 active: false,
-                lastSeen: '10:15',
+                lastSeen: '10/01/2022 21:30:55',
                 messages: [
                     {
-                    date: '10/01/2020 15:30:00',
+                    date: '10/01/2022 15:30:00',
                     message: 'Fai gli auguri a Martina che è il suo compleanno!',
                     status: 'sent',
                     toggle: false
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '10/01/2022 15:50:00',
                     message: 'Grazie per avermelo ricordato, le scrivo subito!',
                     status: 'received',
                     toggle: false
@@ -185,22 +185,22 @@ createApp({
                 avatar: 'assets/img/avatar_8.jpg',
                 visible: true,
                 active: false,
-                lastSeen: '13:15',
+                lastSeen: '10/01/2022 20:30:55',
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '10/01/2022 15:30:55',
                     message: 'Ciao, andiamo a mangiare la pizza stasera?',
                     status: 'received',
                     toggle: false
                     },
                     {
-                    date: '10/01/2020 15:50:00',
+                    date: '10/01/2022 15:50:00',
                     message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
                     status: 'sent',
                     toggle: false
                     },
                     {
-                    date: '10/01/2020 15:51:00',
+                    date: '10/01/2022 15:51:00',
                     message: 'OK!!',
                     status: 'received',
                     toggle: false
@@ -232,7 +232,7 @@ createApp({
         addNewMessage(){
             if(!this.newMessage) return;
             const tempMessage = {
-                date: '10/01/2020 15:54:00',
+                date: '10/01/2022 17:34:00',
                 message: this.newMessage,
                 status: 'sent',
                 toggle: false
@@ -245,7 +245,7 @@ createApp({
         // genera risposta random dopo due secondi dal invio del nuovo messaggio
         getReplyMessage(){
             const tempMessage = {
-                date: '10/01/2020 15:57:00',
+                date: '10/01/2022 17:39:00',
                 message: this.getRandomReply(),
                 status: 'received',
                 toggle: false
