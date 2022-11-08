@@ -6,7 +6,6 @@ createApp({
 
     data(){
         return{
-
             // array di oggetti
             contacts:[
                 {
@@ -121,7 +120,7 @@ createApp({
                 active: false,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '15:30',
                     message: 'Ciao Claudia, hai novità?',
                     status: 'sent'
                     },
@@ -144,7 +143,7 @@ createApp({
                 active: false,
                 messages: [
                     {
-                    date: '10/01/2020 15:30:55',
+                    date: '15:30',
                     message: 'Fai gli auguri a Martina che è il suo compleanno!',
                     status: 'sent'
                     },
@@ -223,7 +222,7 @@ createApp({
                     contact.visible = true;
                 }
             });
-        }
+        },
     },
 
     mounted(){

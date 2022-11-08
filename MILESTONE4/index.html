@@ -16,8 +16,12 @@
     <!-- CSS LINK -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- SCRIPT LUXON -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.0/luxon.js' integrity='sha512-mas9jHaog0obTpZqUHzxPlmPTwwP5clx2UJbdx+DxsCTy8l00hQjzMiJh9lSsqz8dcWSo3MKFZ3icgacn/0Naw==' crossorigin='anonymous'></script>
+
     <!-- SCRIPT VUE -->
     <script src="https://unpkg.com/vue@3"></script>
+
 
     <title>Boolzapp</title>
 </head>
@@ -75,7 +79,7 @@
                         <p>{{ contact.messages[contact.messages.length - 1].message }}</p>
                     </div>
                     <div class="hour">
-                        <p>12:26</p>
+                        <p>{{ contact.messages[contact.messages.length - 1].date }}</p>
                     </div>
                 </div>
     
