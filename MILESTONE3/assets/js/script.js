@@ -172,8 +172,9 @@ createApp({
                 }
             ],
 
-            activeChat: 0
-        
+            activeChat: 0,
+            
+            newMessage: '',
         }
     },
 
@@ -184,6 +185,10 @@ createApp({
             this.activeChat = index;
             this.contacts[this.activeChat].visible = true;
         }
+    },
+
+    mounted(){
+        
     }
     
 }).mount('#app');
