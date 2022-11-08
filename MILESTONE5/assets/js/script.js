@@ -231,7 +231,7 @@ createApp({
             ],
 
             // array risposte random
-            replies: ['Ok!', 'Va bene', 'Grazie', 'Fantastico', 'Arrivo!', 'Scusa!'],
+            replies: ['Ok!', 'Va bene.', 'Grazie.', 'Fantastico.', 'Arrivo!', 'Scusa!', 'Non posso.', 'Ho da fare!', 'Scendi!', 'Richiamami.'],
 
             activeChat: 0,
             newMessage: '',
