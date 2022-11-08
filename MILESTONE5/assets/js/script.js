@@ -235,7 +235,8 @@ createApp({
 
             activeChat: 0,
             newMessage: '',
-            search: ''
+            search: '',
+            scroll: ''
         }
     },
 
@@ -326,11 +327,28 @@ createApp({
             this.contacts[this.activeChat].messages[i].toggle = true;
         },
 
+        // previene l apertura di piu toggle contemporaneamente
         closeAllToggle(){
             this.contacts[this.activeChat].messages.forEach(contact => {
                 contact.toggle = false;
                 contact.info = false
             });
+        },
+
+        // refresh scroll dal basso
+        refreshScroll(){
+            let box = document.querySelector('.box-chat');
+            box.scrollTop = box.scrollHeight;
+        },
+
+        // set dello scroll ogni mezzo secondo
+        setScroll(){
+            this.scroll = setInterval(this.refreshScroll, 500);
+        },
+
+        // interruzione dello scroll
+        stopScroll(){
+            clearInterval(this.scroll);
         }
     },
 

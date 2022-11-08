@@ -88,7 +88,10 @@
         </div>
 
         <!-- box chat -->
-        <div class="chat_container">
+        <div 
+        class="chat_container"
+        @mouseover="stopScroll()"
+        @mouseleave="setScroll()">
 
             <div class="header_chat">
                 <div class="my_avatar">
@@ -135,7 +138,8 @@
 
             </div>
 
-            <div class="bar_chat">
+            <div 
+            class="bar_chat">
                 <i class="fa-regular fa-face-smile"></i>
                 <input
                 type="text" 
