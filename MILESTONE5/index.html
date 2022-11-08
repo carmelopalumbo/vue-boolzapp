@@ -124,7 +124,9 @@
                         <p @click="chat.info = !chat.info">Info messaggio</p>
                         <p
                         @click="deleteMessage(index)">Cancella messaggio</p>
-                        <p v-if="chat.info">{{chat.date}}</p>
+                        <p 
+                        v-if="chat.info"
+                        class="info_chat"> Inviato: {{chat.date}} <br> Visualizzato.</p>
                     </div>
                     <i 
                     v-show="chat.toggle"

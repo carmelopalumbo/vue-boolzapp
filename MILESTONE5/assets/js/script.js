@@ -329,6 +329,7 @@ createApp({
         closeAllToggle(){
             this.contacts[this.activeChat].messages.forEach(contact => {
                 contact.toggle = false;
+                contact.info = false
             });
         }
     },
