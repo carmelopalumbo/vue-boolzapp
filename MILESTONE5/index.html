@@ -16,6 +16,9 @@
     <!-- FONT AWESOME -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous'/>
 
+    <!-- CDN LUXON -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.0/luxon.js' integrity='sha512-mas9jHaog0obTpZqUHzxPlmPTwwP5clx2UJbdx+DxsCTy8l00hQjzMiJh9lSsqz8dcWSo3MKFZ3icgacn/0Naw==' crossorigin='anonymous'></script>
+
     <!-- CSS LINK -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -143,9 +146,7 @@
                 type="text" 
                 placeholder="Scrivi un messaggio" 
                 v-model="newMessage"
-                @keyup.enter="addNewMessage()"
-                @mouseover="setScroll()"
-                @mouseleave="stopScroll()">
+                @keyup.enter="addNewMessage()">
                 <i class="fa-solid fa-microphone"></i>
             </div>
         </div>

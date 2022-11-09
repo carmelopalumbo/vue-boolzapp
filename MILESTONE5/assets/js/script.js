@@ -1,7 +1,7 @@
 // vue
+const dt = luxon.DateTime;
 
 const {createApp} = Vue;
-
 createApp({
 
     data(){
@@ -262,6 +262,7 @@ createApp({
             this.contacts[this.activeChat].messages.push(tempMessage);
             this.newMessage = '';
             setTimeout(this.getReplyMessage, 2000);
+            setTimeout(this.refreshScroll, 200);
         },
 
         // genera risposta random dopo due secondi dal invio del nuovo messaggio
@@ -273,6 +274,7 @@ createApp({
                 toggle: false
             }
             this.contacts[this.activeChat].messages.push(tempMessage);
+            setTimeout(this.refreshScroll, 200);
         },
 
         // filtra le chat tramite l input in barra
@@ -340,16 +342,6 @@ createApp({
             let box = document.querySelector('.box-chat');
             box.scrollTop = box.scrollHeight;
         },
-
-        // set dello scroll ogni mezzo secondo
-        setScroll(){
-            this.scroll = setInterval(this.refreshScroll, 500);
-        },
-
-        // interruzione dello scroll
-        stopScroll(){
-            clearInterval(this.scroll);
-        }
     },
 
     mounted(){
