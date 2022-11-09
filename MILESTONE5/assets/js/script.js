@@ -275,6 +275,10 @@ createApp({
                 toggle: false
             }
             this.contacts[this.activeChat].messages.push(tempMessage);
+
+            // aggiorno ultimo accesso
+            this.contacts[this.activeChat].lastSeen = dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE);
+            
             setTimeout(this.refreshScroll, 200);
         },
 
