@@ -2,7 +2,7 @@
 
 const {createApp} = Vue;
 const dt = luxon.DateTime;
-const now = dt.now();
+
 createApp({
 
     data(){
@@ -15,24 +15,24 @@ createApp({
                 avatar: 'assets/img/avatar_1.jpg',
                 visible: true,
                 active: true,
-                lastSeen: now.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
+                lastSeen: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                 messages: [
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Hai portato a spasso il cane?',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Hai portato a spasso il gatto?',
                     status: 'sent',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Ricordati di stendere i panni',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Ricordati di fare la spesa',
                     status: 'sent',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: 'Tutto fatto!',
                     status: 'received',
                     info: false,
@@ -45,25 +45,25 @@ createApp({
                 avatar: 'assets/img/avatar_2.jpg',
                 visible: true,
                 active: false,
-                lastSeen: now.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
+                lastSeen: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                 messages: [
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: 'Ciao come stai?',
                     status: 'sent',
                     info: false,
                     toggle: false,
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Bene grazie! Stasera ci vediamo?',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Bene grazie! Domani ci vediamo?',
                     status: 'received',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Mi piacerebbe ma devo andare al cinema con Luca.',
                     status: 'sent',
                     info: false,
                     toggle: false
@@ -75,25 +75,25 @@ createApp({
                 avatar: 'assets/img/avatar_3.jpg',
                 visible: true,
                 active: false,
-                lastSeen: now.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
+                lastSeen: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                 messages: [
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'La Marianna va in campagna',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'La Marianna va in discoteca',
                     status: 'received',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: 'Sicuro di non aver sbagliato chat?',
                     status: 'sent',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Ah scusa!',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Ops, scusa!',
                     status: 'received',
                     info: false,
                     toggle: false
@@ -105,18 +105,18 @@ createApp({
                 avatar: 'assets/img/avatar_4.jpg',
                 visible: true,
                 active: false,
-                lastSeen: now.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
+                lastSeen: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                 messages: [
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Lo sai che ha aperto una nuova pizzeria?',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Lo sai che Marco ha aperto una nuova pizzeria?',
                     status: 'sent',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Si, ma preferirei andare al cinema',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Si, ma preferirei andare al bowling',
                     status: 'received',
                     info: false,
                     toggle: false
@@ -128,18 +128,18 @@ createApp({
                 avatar: 'assets/img/avatar_5.jpg',
                 visible: true,
                 active: false,
-                lastSeen: now.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
+                lastSeen: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                 messages: [
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Ricordati di chiamare la nonna',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Ricordati di chiamare lo zio',
                     status: 'sent',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Va bene, stasera la sento',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Va bene, stasera lo sento!',
                     status: 'received',
                     info: false,
                     toggle: false
@@ -151,25 +151,25 @@ createApp({
                 avatar: 'assets/img/avatar_6.jpg',
                 visible: true,
                 active: false,
-                lastSeen: now.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
+                lastSeen: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                 messages: [
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Ciao Claudia, hai novità?',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Ciao cara, hai novità?',
                     status: 'sent',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: 'Non ancora',
                     status: 'received',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Nessuna nuova, buona nuova',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Va bene, ci risentiamo!',
                     status: 'sent',
                     info: false,
                     toggle: false
@@ -181,18 +181,18 @@ createApp({
                 avatar: 'assets/img/avatar_7.jpg',
                 visible: true,
                 active: false,
-                lastSeen: now.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
+                lastSeen: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                 messages: [
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Fai gli auguri a Martina che è il suo compleanno!',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Fai gli auguri a Giovanni che è il suo compleanno!',
                     status: 'sent',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'Grazie per avermelo ricordato, gli scrivo subito!',
                     status: 'received',
                     info: false,
                     toggle: false
@@ -204,24 +204,24 @@ createApp({
                 avatar: 'assets/img/avatar_8.jpg',
                 visible: true,
                 active: false,
-                lastSeen: now.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
+                lastSeen: dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE),
                 messages: [
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: 'Ciao, andiamo a mangiare la pizza stasera?',
                     status: 'received',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
-                    message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+                    message: 'No, l\'ho già mangiata ieri, andiamo al sushi!',
                     status: 'sent',
                     info: false,
                     toggle: false
                     },
                     {
-                    date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
+                    date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                     message: 'OK!!',
                     status: 'received',
                     info: false,
@@ -255,7 +255,7 @@ createApp({
         addNewMessage(){
             if(!this.newMessage) return;
             const tempMessage = {
-                date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
+                date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                 message: this.newMessage,
                 status: 'sent',
                 toggle: false
@@ -269,7 +269,7 @@ createApp({
         // genera risposta random dopo due secondi dal invio del nuovo messaggio
         getReplyMessage(){
             const tempMessage = {
-                date: now.setLocale('it').toLocaleString(dt.DATETIME_MED),
+                date: dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                 message: this.getRandomReply(),
                 status: 'received',
                 toggle: false
@@ -306,8 +306,7 @@ createApp({
         // verifica se non sono presenti date e ritorna una stringa vuota da visualizzare nel anteprima
         lastDate(contact){
             if(contact.messages.length !== 0){
-                tempData = now.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE);
-                return tempData;
+                return contact.messages[contact.messages.length - 1].date;
             }else{
                 return "";
             }
@@ -317,11 +316,6 @@ createApp({
         getRandomReply(){
             const num = Math.floor(Math.random() * (this.replies.length));
             return this.replies[num];
-        },
-
-        //formatta la data per la visualizzazione in chat
-        getChatDate(){
-            return now.setLocale('it').toLocaleString(dt.TIME_24_SIMPLE);
         },
 
         // apre il toggle per eliminare un messagio e previene l apertura di altri toggle se presente uno aperto
@@ -343,10 +337,6 @@ createApp({
             let box = document.querySelector('.box-chat');
             box.scrollTop = box.scrollHeight;
         },
-    },
-
-    mounted(){
-        
     }
-    
+
 }).mount('#app');

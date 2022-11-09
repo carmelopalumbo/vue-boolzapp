@@ -82,7 +82,7 @@
                         <p :set="text = lastMessage(contact)">{{ text }}</p>
                     </div>
                     <div class="hour">
-                        <p :set="hour = lastDate(contact)">{{ hour }}</p>
+                        <p :set="hour = lastDate(contact)">{{ Array.from(hour).splice(11,5).join('') }}</p>
                     </div>
                 </div>
     
@@ -120,11 +120,11 @@
                     class="message"
                     @click.self="getToggle(index)">{{chat.message}}</p>
                     <p 
-                    class="date"
-                    :set="chatData = getChatDate()">{{chatData}}</p>
+                    class="date">{{Array.from(chat.date).splice(11,5).join('')}}</p>
                     <div 
                     class="toggle_info"
                     v-show="chat.toggle">
+                    <!-- click su info per avere data completa del messaggio -->
                         <p @click="chat.info = !chat.info">Info messaggio</p>
                         <p
                         @click="deleteMessage(index)">Cancella messaggio</p>
