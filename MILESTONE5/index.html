@@ -60,7 +60,7 @@
                     type="text" 
                     placeholder="Cerca e inizia una nuova chat" 
                     name="search"
-                    v-model="search"
+                    v-model.trim="search"
                     @keyup="findChat()">
                 </div>
             </div>
