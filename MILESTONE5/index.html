@@ -16,8 +16,8 @@
     <!-- FONT AWESOME -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous'/>
 
-    <!-- CDN LUXON -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.0/luxon.js' integrity='sha512-mas9jHaog0obTpZqUHzxPlmPTwwP5clx2UJbdx+DxsCTy8l00hQjzMiJh9lSsqz8dcWSo3MKFZ3icgacn/0Naw==' crossorigin='anonymous'></script>
+    <!-- SCRIPT LUXON -->
+    <script src="/MILESTONE5/assets/js/luxon.js"></script>
 
     <!-- CSS LINK -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -82,7 +82,7 @@
                         <p :set="text = lastMessage(contact)">{{ text }}</p>
                     </div>
                     <div class="hour">
-                        <p :set="hour = lastDate(contact)">{{ Array.from(hour).splice(11,5).join("") }}</p>
+                        <p :set="hour = lastDate(contact)">{{ hour }}</p>
                     </div>
                 </div>
     
@@ -98,7 +98,7 @@
                 <div class="my_avatar">
                     <img :src="contacts[activeChat].avatar" :alt="contacts[activeChat].name" class="avatar">
                     <p>{{contacts[activeChat].name}}</p>
-                    <p :set="lastSeen = contacts[activeChat].lastSeen">Ultimo accesso oggi alle {{ Array.from(lastSeen).splice(11,5).join("") }}</p>
+                    <p :set="lastSeen = contacts[activeChat].lastSeen">Ultimo accesso oggi alle {{ contacts[activeChat].lastSeen }}</p>
                 </div>
                 <div class="profile_icons">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -121,7 +121,7 @@
                     @click.self="getToggle(index)">{{chat.message}}</p>
                     <p 
                     class="date"
-                    :set="chatDate = getChatDate(index)">{{chatDate}}</p>
+                    :set="chatData = getChatDate()">{{chatData}}</p>
                     <div 
                     class="toggle_info"
                     v-show="chat.toggle">
