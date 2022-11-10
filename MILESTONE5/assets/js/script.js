@@ -285,11 +285,7 @@ createApp({
         // filtra le chat tramite l input in barra
         findChat(){
             this.contacts.forEach(contact => {
-                if(!contact.name.toLowerCase().includes(this.search.toLowerCase())){
-                    contact.visible = false;
-                }else{
-                    contact.visible = true;
-                }
+                contact.visible = contact.name.toLowerCase().includes(this.search.toLowerCase());
             });
         },
 
